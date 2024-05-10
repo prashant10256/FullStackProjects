@@ -41,7 +41,7 @@ export const postJob = catchAsyncError(async(req,res,next)=>{
    })
 })
 
-export const getmyJobs = catchAsyncError(async(req,res,next)=>{
+export const getMyJobs = catchAsyncError(async(req,res,next)=>{
     const {role} = req.user;
     if(role === "Job Seeker"){
         return next(

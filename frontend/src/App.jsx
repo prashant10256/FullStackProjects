@@ -19,16 +19,16 @@ import { Toaster } from "react-hot-toast";
 import { Context } from "./main";
 
 const App = () => {
-  const { isAuthorized, setISAuthorized, setUser } = useContext(Context);
+  const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
         const response = await axios.get("http://localhost:4000/api/v1/user/getUser", { withCredentials: true });
         setUser(response.data.user);
-        setISAuthorized(true);
+        setIsAuthorized(true);
       } catch (error) {
-        setISAuthorized(false);
+        setIsAuthorized(false);
       }
     };
     fetchUser();
