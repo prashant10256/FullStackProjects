@@ -20,7 +20,6 @@ import { Context } from "./main";
 
 const App = () => {
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
-
   useEffect(() => {
     const fetchUser = async () => {
       try {
